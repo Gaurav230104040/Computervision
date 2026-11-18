@@ -163,15 +163,15 @@ The proposed implementation modifies the frequency filtering operation in `hfreq
 
 The modified model is implemented in:
 
-text
+'''text
 freqnet.py
-
+'''
 
 The original implementation is retained separately in:
 
-text
+'''text
 freqnet1.py
-
+'''
 ### 4.3 Training Configuration
 
 The following parameters should match the experimental setup:

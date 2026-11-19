@@ -52,24 +52,24 @@ Component
 
 ### Installation
 
-Clone the original implementation:
+Clone the implementation:
 
 bash
-git clone https://github.com/chuangchuangtan/FreqNet-DeepfakeDetection.git
+git clone https://github.com/Gaurav230104040/Computervision.git
 
 cd FreqNet-DeepfakeDetection
 
 
 Install the dependencies:
 
-bash
+```bash
 pip install -r requirements.txt
-
+```
 
 Install PyTorch with a CUDA-compatible build if it is not already installed.
 
 Verify the installation:
-
+```
 python
 import torch
 
@@ -78,7 +78,7 @@ print("CUDA Available:", torch.cuda.is_available())
 
 if torch.cuda.is_available():
     print("GPU:", torch.cuda.get_device_name(0))
-
+```
 
 
 
@@ -141,10 +141,10 @@ Two implementations are considered:
 
 The baseline uses the original FreqNet frequency filtering mechanism.
 
-bash
+```bash
 python base_model.py
 python trainer.py
-
+```
 
 The training configuration should specify:
 
@@ -164,13 +164,13 @@ The proposed implementation modifies the frequency filtering operation in `hfreq
 The modified model is implemented in:
 
 ```text
-freqnet.py
+python freqnet.py
 ```
 
 The original implementation is retained separately in:
 
 ```text
-freqnet1.py
+python freqnet1.py
 ```
 ### 4.3 Training Configuration
 
@@ -201,19 +201,8 @@ The trained checkpoints can be evaluated using the testing and validation script
 
 The proposed checkpoint can be loaded using:
 
-```python
-import torch
-
-checkpoint_path = "/content/4-classes-freqnet-v2.pth"
-
-state_dict = torch.load(
-    checkpoint_path,
-    map_location="cpu",
-    weights_only=True
-)
-
-model.load_state_dict(state_dict, strict=True)
-```
+```text 
+python load_checkpoint.py```
 
 The model should be initialized using the appropriate implementation before loading the checkpoint.
 

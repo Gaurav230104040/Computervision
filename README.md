@@ -202,7 +202,8 @@ The trained checkpoints can be evaluated using the testing and validation script
 The proposed checkpoint can be loaded using:
 
 ```text 
-python load_checkpoint.py```
+python load_checkpoint.py
+```
 
 The model should be initialized using the appropriate implementation before loading the checkpoint.
 
